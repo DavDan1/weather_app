@@ -27,7 +27,7 @@ class CurrentWeatherCard extends Component {
         town: locationResponse.data.results[0].components.town,
         temp: weatherResponse.data.current.temp,
         sunrise: weatherResponse.data.current.sunrise,
-        sunrisedaily: weatherResponse.data.daily.sunrise,
+        
         sunset: weatherResponse.data.current.sunset,
         country: locationResponse.data.results[0].components.country,
       };
@@ -42,6 +42,7 @@ class CurrentWeatherCard extends Component {
     const temp = this.state.location.temp;
     const country = this.state.location.country;
     const town = this.state.location.town;
+  
 
     return (
       <Segment placeholder>
@@ -70,8 +71,7 @@ class CurrentWeatherCard extends Component {
             </Grid.Column>
 
             <Grid.Column>
-              Sunrise next 7 Days
-              <Weatherforecast data={this.state.location.sunrisedaily} />
+              
             </Grid.Column>
           </Grid.Row>
         </Grid>
